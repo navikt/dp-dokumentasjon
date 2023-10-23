@@ -7,4 +7,17 @@ theme:
   logo: https://cdn.nav.no/teamdagpenger/dp-produktside-frontend/_next/static/media/static-dagpenger.1fd8010d.svg
   palette:
     primary: white
+  features:
+    - content.action.edit
+    - search.suggest
+  icon:
+    edit: material/pencil
+    view: material/eye
+    repo: fontawesome/brands/github
 copyright: Made with ❤️ by Dagpengeklynga
+plugins:
+  - search
+#  - drawio-exporter
+  - drawio_file
+extra:
+  generator: false
