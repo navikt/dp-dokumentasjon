@@ -1,1 +1,10 @@
-site_name: My Docs
+site_name: Dagpenger
+repo_url: https://github.com/nais/doc
+site_url: https://doc.nais.io/
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  logo: https://cdn.nav.no/teamdagpenger/dp-produktside-frontend/_next/static/media/static-dagpenger.1fd8010d.svg
+  palette:
+    primary: white
+copyright: Made with ❤️ by Dagpengeklynga
