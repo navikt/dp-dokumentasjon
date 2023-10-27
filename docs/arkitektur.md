@@ -1,9 +1,6 @@
 # Arkitektur
 
-![My alt text](test.drawio)
 
-## test
-![My alt text](test2.drawio)
 
 ## Mermaid
 ```mermaid
