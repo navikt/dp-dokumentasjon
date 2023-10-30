@@ -84,4 +84,7 @@ nav:
   - Team innbyggerflate:
     - Oversikt: innbyggerflater/index.md
     - Søknadsdialog: innbyggerflater/soknad.md
+    - nav.no: innbyggerflater/nav-no.md
+    - Meldeplikt: innbyggerflater/meldeplikt.md
+    - Rapportering: innbyggerflater/rapportering.md 
       
