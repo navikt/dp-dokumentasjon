@@ -4,25 +4,27 @@ site_url: https://navikt.github.com/dp-dokumentasjon
 edit_uri: edit/main/docs/
 theme:
   name: material
-  #logo: https://cdn.nav.no/teamdagpenger/dp-produktside-frontend/_next/static/media/static-dagpenger.1fd8010d.svg
-  logo: media/sign-document-icon.svg
+  logo: https://cdn.nav.no/teamdagpenger/dp-produktside-frontend/_next/static/media/static-dagpenger.1fd8010d.svg
+  #logo: media/sign-document-icon.svg
   palette:
-  # Palette toggle for light mode
-  - media: "(prefers-color-scheme: light)"
-    scheme: default
-    primary: blue grey
-    accent: deep purple
-    toggle:
-      icon: material/brightness-7
-      name: Switch to dark mode
-  # Palette toggle for dark mode
-  - media: "(prefers-color-scheme: dark)"
-    scheme: slate
-    primary: blue grey
-    accent: light blue
-    toggle:
-      icon: material/brightness-4
-      name: Switch to light mode
+    primary: white
+    
+  # # Palette toggle for light mode
+  # - media: "(prefers-color-scheme: light)"
+  #   scheme: default
+  #   primary: blue grey
+  #   accent: deep purple
+  #   toggle:
+  #     icon: material/brightness-7
+  #     name: Switch to dark mode
+  # # Palette toggle for dark mode
+  # - media: "(prefers-color-scheme: dark)"
+  #   scheme: slate
+  #   primary: blue grey
+  #   accent: light blue
+  #   toggle:
+  #     icon: material/brightness-4
+  #     name: Switch to light mode
   features:
     - content.action.edit
     - content.code.copy
