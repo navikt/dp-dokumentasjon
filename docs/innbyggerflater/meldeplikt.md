@@ -1,4 +1,4 @@
-# Meldeplikt arkitektur
+# Meldeplikt
 
 Når man får DP (Dagpenger, https://www.nav.no/dagpenger), AAP (Arbeidsavklaringspenger, https://www.nav.no/aap) eller TP (Tiltakspenger, https://www.nav.no/tiltakspenger) har man meldeplikt, dvs. man må sende meldekort hver fjortende dag.
 
@@ -8,7 +8,8 @@ Team Dagpenger tenkte å prøve den nye løsningen med begrenset antall brukere 
 - Det finnes en tabell i meldkort-api sin database som inneholder fødselsnummer
 - Hvis fødselsnumeret til bruker er i denne tabellen, sendes brukeren til den nye løsningen
 
-Applikasjoner:  
+
+## Applikasjoner
 https://github.com/navikt/meldekort (frontend)  
 https://github.com/navikt/meldekort-mikrofrontend  
 https://github.com/navikt/meldekort-api  
@@ -42,6 +43,7 @@ INSERT INTO tekst (kode, verdi, sprak,  fra_dato) VALUES ('textKode', 'Text v2 '
 ```
 
 Da skal v1 vises når man har en aktiv meldeperiode som er før 2023-10-29 og v2 skal vises for meldeperioder etter 2023-10-29
+
 
 ## Arkitekrur
 
