@@ -17,13 +17,13 @@ https://github.com/navikt/meldekortservice
 https://github.com/navikt/meldekortkontroll-api  
 
 **VIKTIG!**  
-Tekster som vises i meldekort-frontend kommer fra meldekort-api. Vi må vise de tekstene som var gyldige for det valgte meldekortet (for den meldeperioden)
-Det finnes fortsatt 2 files med tekster i meldekort (src\app\mock\responses\tekster_nb.json og src\app\mock\responses\tekster_en.json),
-men disse er ment for lokalkjøring/testing og inneholder ikke alle/siste versjoner av tekstene.
-meldekort-api har en tabell med tekstene i sin database. Denne tabellen er fylt ut ved hjelp av R__recreate_texts-migrasjonen og har disse kolonnene:
-- kode
-- verdi
-- sprak
+Tekster som vises i meldekort-frontend kommer fra meldekort-api. Vi må vise de tekstene som var gyldige for det valgte meldekortet (for den meldeperioden).  
+Det finnes fortsatt 2 filer med tekster i meldekort (src\app\mock\responses\tekster_nb.json og src\app\mock\responses\tekster_en.json),
+men disse er ment for lokalkjøring/testing og inneholder ikke alle/siste versjoner av tekstene.  
+meldekort-api har en tabell med tekstene i sin database. Denne tabellen er fylt ut ved hjelp av R__recreate_texts-migrasjonen og har disse kolonnene:  
+- kode  
+- verdi  
+- sprak  
 - fra_dato
 
 For å opprette en tekst i denne tabellen må man skrive i R__recreate_texts, f.eks:
