@@ -4,8 +4,8 @@ Når man får DP (Dagpenger, https://www.nav.no/dagpenger), AAP (Arbeidsavklarin
 
 Team Dagpenger "arvet" ansvaret for å gjøre endringer og oppgraderinger i meldekort-løsningen fordi alle fra Team Meldekort ble flyttet til Team Dagpenger.  
 Dagpenger-delen i meldekort-løsningen skal erstattes med dp-rapportering-frontend.  
-Team Dagpenger tenkte å prøve den nye løsningen med begrenset antall brukere først. For å velge brukere som skulle sendes til den nye løsningen, ble opprettet en mekanisme som sjekker hvem som skal sendes:   
-- Det finnes en tabell i meldkort-api sin database som inneholder fødselsnummer
+Team Dagpenger tenkte å prøve den nye løsningen med begrenset antall brukere først. For å velge brukere som skulle sendes til den nye løsningen, ble opprettet en mekanisme som sjekker hvem som skal sendes:  
+- Det finnes en tabell i meldkort-api sin database som inneholder fødselsnummer  
 - Hvis fødselsnumeret til bruker er i denne tabellen, sendes brukeren til den nye løsningen
 
 
@@ -52,18 +52,18 @@ Da skal v1 vises når man har en aktiv meldeperiode som er før 2023-10-29 og v2
 
 ## Utvikling
 
-Vanlig utviklingsprosess:
-1. Opprett en ny branch
-2. Gjør nødvendige endringer i denne branchen
+Vanlig utviklingsprosess:  
+1. Opprett en ny branch  
+2. Gjør nødvendige endringer i denne branchen  
 3. Deploy branchen til Q1 og/eller Q2. For å gjøre dette:  
-Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg riktig branch, velg miljø Q1 eller Q2 > Run workflow
-4. Sjekk endringene i Q1 og/eller Q2
-5. Opprett en pull request
-6. Når PRen er sjekket, merge branchen til master
+Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg riktig branch, velg miljø Q1 eller Q2 > Run workflow  
+4. Sjekk endringene i Q1 og/eller Q2  
+5. Opprett en pull request  
+6. Når PRen er sjekket, merge branchen til master  
 7. Bygg release. For å gjøre dette:  
-Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch, velg miljø Q1 eller Q2, velg bump > Run workflow
+Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch, velg miljø Q1 eller Q2, velg bump > Run workflow  
 8. Deploy release til prod. For å gjre dette:  
-Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch, skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow
+Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch, skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow  
 9. Oppdater https://confluence.adeo.no/display/TMP/Versjonsoversikt
 
 Nyttig Grafana dashboard for å sjekke at alt fungerer og meldekort kommer inn:  
