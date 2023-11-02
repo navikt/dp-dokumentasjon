@@ -62,12 +62,12 @@ Vanlig utviklingsprosess:
 6. Når PRen er sjekket, merge branchen til master  
 7. Bygg release. For å gjøre dette:  
 Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch, velg miljø Q1 eller Q2, velg bump > Run workflow  
-8. Deploy release til prod $^{1}$. For å gjøre dette:  
+8. Deploy release til prod [1]. For å gjøre dette:  
 Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch, skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow  
-9. Sjekk at alt fungerer $^{2}$
+9. Sjekk at alt fungerer [2]
 10. Oppdater https://confluence.adeo.no/display/TMP/Versjonsoversikt
 
-$^{1}$ **OBS!**  
+[1] **OBS!**  
 Flertallet sender meldekortene sine fra fredag til mandag. 
 Det betyr at det ikke er veldig smart å deploye noe til prod i disse dagene med mindre det er en prodfeil fiks.
 Det er bedre å deploye til prod fra tirsdag til torsdag.
@@ -75,7 +75,7 @@ Det er bedre å deploye til prod fra tirsdag til torsdag.
 ![](meldeplikt-innsendte.png)
 *Antall REST-kall for å kontrollere meldekort per ukedag fra mandag til søndag*
 
-$^{2}$ Nyttig Grafana dashboard for å sjekke at alt fungerer og meldekort kommer inn:  
+[2] Nyttig Grafana dashboard for å sjekke at alt fungerer og meldekort kommer inn:  
 https://grafana.nais.io/d/rPG4uUC7k/meldekort-api?orgId=1&refresh=30s
 
 Andre dashboards:  
