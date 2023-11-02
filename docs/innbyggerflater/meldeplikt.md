@@ -27,7 +27,7 @@ meldekort-api har en tabell med tekstene i sin database. Denne tabellen er fylt 
 - fra_dato
 
 For å opprette en tekst i denne tabellen må man skrive i R__recreate_texts, f.eks:
-```
+```sql
 INSERT INTO tekst (kode, verdi, sprak,  fra_dato) VALUES ('overskrift.bruttoBelop', 'Brutto beløp ', 'nb',  TO_DATE('1000-01-01', 'YYYY-MM-DD'));
 INSERT INTO tekst (kode, verdi, sprak,  fra_dato) VALUES ('overskrift.bruttoBelop', 'Gross amount ', 'en',  TO_DATE('1000-01-01', 'YYYY-MM-DD'));
 ```
@@ -35,7 +35,7 @@ INSERT INTO tekst (kode, verdi, sprak,  fra_dato) VALUES ('overskrift.bruttoBelo
 Dato 1000-01-01 betyr at denne teksten skal i praksis gjelde for alle meldekort
 
 For å ha forskjellige versjoner av samme tekst:
-```
+```sql
 INSERT INTO tekst (kode, verdi, sprak,  fra_dato) VALUES ('textKode', 'Tekst v1 ', 'nb',  TO_DATE('1000-01-01', 'YYYY-MM-DD'));
 INSERT INTO tekst (kode, verdi, sprak,  fra_dato) VALUES ('textKode', 'Text v1 ',  'en',  TO_DATE('1000-01-01', 'YYYY-MM-DD'));
 INSERT INTO tekst (kode, verdi, sprak,  fra_dato) VALUES ('textKode', 'Tekst v2 ', 'nb',  TO_DATE('2023-10-29', 'YYYY-MM-DD'));
@@ -62,11 +62,20 @@ Vanlig utviklingsprosess:
 6. Når PRen er sjekket, merge branchen til master  
 7. Bygg release. For å gjøre dette:  
 Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch, velg miljø Q1 eller Q2, velg bump > Run workflow  
-8. Deploy release til prod. For å gjre dette:  
-Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch, skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow  
-9. Oppdater https://confluence.adeo.no/display/TMP/Versjonsoversikt
+8. Deploy release til prod*. For å gjøre dette:  
+Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch, skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow
+9. Sjekk at alt fungerer**
+10. Oppdater https://confluence.adeo.no/display/TMP/Versjonsoversikt
 
-Nyttig Grafana dashboard for å sjekke at alt fungerer og meldekort kommer inn:  
+***OBS!**  
+Flertallet sender meldekortene sine fra fredag til mandag. 
+Det betyr at det ikke er veldig smart å deploye noe til prod i disse dagene med mindre det er en prodfeil fiks.
+Det er bedre å deploye til prod fra tirsdag til torsdag.
+
+![](meldeplikt-innsendte.png)
+*Antall REST-kall for å kontrollere meldekort per ukedag fra mandag til søndag*
+
+**Nyttig Grafana dashboard for å sjekke at alt fungerer og meldekort kommer inn:  
 https://grafana.nais.io/d/rPG4uUC7k/meldekort-api?orgId=1&refresh=30s
 
 Andre dashboards:  
