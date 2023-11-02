@@ -1,5 +1,7 @@
 # Prinsipper
 
+![Boy scout rule](../media/boy-scout-rule.png)
+
 ## Introduksjon
 
 Kode lever. Det er ikke noe man skriver og glemmer. Brukere ønsker nye funksjoner. Feil må fikses. Koden skal være enkel å forstå, selv om du ikke har sett den før eller det har gått lang tid siden du sist så på koden. Dette er grunnen til at kodekvalitet er viktig. Programmering handler mer om å skrive kode som du og dine medarbeidere kan forstå, og mindre om å vise hvor flink du er med programmeringsspråket ditt.

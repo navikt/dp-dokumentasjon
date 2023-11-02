@@ -5,34 +5,13 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   logo: https://cdn.nav.no/teamdagpenger/dp-produktside-frontend/_next/static/media/static-dagpenger.1fd8010d.svg
-  #logo: media/sign-document-icon.svg
   palette:
     primary: white
-    
-  # # Palette toggle for light mode
-  # - media: "(prefers-color-scheme: light)"
-  #   scheme: default
-  #   primary: blue grey
-  #   accent: deep purple
-  #   toggle:
-  #     icon: material/brightness-7
-  #     name: Switch to dark mode
-  # # Palette toggle for dark mode
-  # - media: "(prefers-color-scheme: dark)"
-  #   scheme: slate
-  #   primary: blue grey
-  #   accent: light blue
-  #   toggle:
-  #     icon: material/brightness-4
-  #     name: Switch to light mode
+ 
   features:
     - content.action.edit
     - content.code.copy
     - content.code.annotate
-  #  - content.tabs.link
-  #  - navigation.footer
-    - navigation.instant
-   # - navigation.tabs
     - navigation.indexes
     - search.suggest
     - search.highlight
@@ -44,8 +23,8 @@ theme:
 copyright: Made with ❤️ by Dagpengeklynga
 plugins:
   - search
+  - glightbox
   - drawio_file
-  - mermaid2
 markdown_extensions:
   - toc:
       permalink: True
