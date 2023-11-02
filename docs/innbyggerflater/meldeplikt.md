@@ -62,9 +62,9 @@ Vanlig utviklingsprosess:
 6. Når PRen er sjekket, merge branchen til master  
 7. Bygg release. For å gjøre dette:  
 Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch, velg miljø Q1 eller Q2, velg bump > Run workflow  
-8. Deploy release til prod*. For å gjøre dette:  
+8. Deploy release til prod *. For å gjøre dette:  
 Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch, skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow  
-9. Sjekk at alt fungerer**  
+9. Sjekk at alt fungerer **  
 10. Oppdater https://confluence.adeo.no/display/TMP/Versjonsoversikt
 
 ***OBS!**  
