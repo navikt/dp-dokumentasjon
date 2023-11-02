@@ -82,6 +82,7 @@ extra:
   generator: false
 nav:
   - Team innbyggerflate:
+    - Prinsipper: innbyggerflater/prinsipper.md
     - Oversikt: innbyggerflater/index.md
     - Søknadsdialog: innbyggerflater/soknad.md
     - nav.no: innbyggerflater/nav-no.md
