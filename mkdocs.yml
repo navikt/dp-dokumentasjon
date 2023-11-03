@@ -49,8 +49,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+#      emoji_index: !!python/name:materialx.emoji.twemoji
+#      emoji_generator: !!python/name:materialx.emoji.to_svg
   - def_list
   - attr_list
   - footnotes
@@ -61,10 +61,12 @@ extra:
   generator: false
 nav:
   - Team innbyggerflate:
-    - Prinsipper: innbyggerflater/prinsipper.md
-    - Oversikt: innbyggerflater/index.md
-    - Søknadsdialog: innbyggerflater/soknad.md
-    - nav.no: innbyggerflater/nav-no.md
-    - Meldeplikt: innbyggerflater/meldeplikt.md
-    - Rapportering: innbyggerflater/rapportering.md 
-      
+    - Om teamet: innbyggerflater/README.md
+    - Våre løsninger:
+      - Systemkart: innbyggerflater/systemkart.md
+      - Søknadsdialog: innbyggerflater/soknad.md
+      - nav.no: innbyggerflater/nav-no.md
+      - Meldeplikt: innbyggerflater/meldeplikt.md
+      - Rapportering: innbyggerflater/rapportering.md
+    - Prinsipper:
+      - Kodekvalitet: innbyggerflater/kodekvalitet.md
