@@ -1,6 +1,7 @@
 # Meldeplikt
 
 Når man får DP (Dagpenger, https://www.nav.no/dagpenger), AAP (Arbeidsavklaringspenger, https://www.nav.no/aap) eller TP (Tiltakspenger, https://www.nav.no/tiltakspenger) har man meldeplikt, dvs. man må sende meldekort hver fjortende dag.
+Meldekortet er et skjema man fyller ut, der man gir NAV opplysninger om blant annet jobb, aktiviteter og fravær de siste 14 dagene.
 
 Team Dagpenger "arvet" ansvaret for å gjøre endringer og oppgraderinger i meldekort-løsningen fordi alle fra Team Meldekort ble flyttet til Team Dagpenger.  
 Dagpenger-delen i meldekort-løsningen skal erstattes med dp-rapportering-frontend.  
@@ -75,9 +76,14 @@ Det er bedre å deploye til prod fra tirsdag til torsdag.
 ![](meldeplikt-innsendte.png)
 *Antall REST-kall for å kontrollere meldekort per ukedag fra mandag til søndag*
 
+## Overvåkning
 [2] Nyttig Grafana dashboard for å sjekke at alt fungerer og meldekort kommer inn:  
 https://grafana.nais.io/d/rPG4uUC7k/meldekort-api?orgId=1&refresh=30s
 
 Andre dashboards:  
 https://grafana.nais.io/d/h_LlxHcVz/team-meldeplikt-nais-app-dashbord?from=now%2Fd&to=now&orgId=1&refresh=1m  
 https://grafana.nais.io/d/531ynU5Vz/meldekortservice?orgId=1
+
+Man kan også sjekke kall_logg-tabellene i meldekort-api, meldekorservice og meldekortkontroll-api.
+Disse applikasjonene logger alle requeste'er som kommer inn og alle request'er de sender ut og alle respons'er.
+Logg slettes etter 30 dager i meldekorservice, 90 dager i meldekort-api, 120 dager i meldekortkontroll-api.
