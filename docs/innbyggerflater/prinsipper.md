@@ -249,6 +249,8 @@ Ting å teste:
 - Kode for kartlegging
 - Kontrollører - kontrakten mellom koden og andre systemer
 - Kode som trenger ekstra dokumentasjon
-- Ting å unngå å teste:
+
+Ting å unngå å teste:
+
 - Tredjepartsbiblioteker
 - Hvis du ender opp med å mocking alt

@@ -1,6 +1,6 @@
 site_name: Dagpenger
 repo_url: https://github.com/navikt/dp-dokumentasjon
-site_url: https://navikt.github.com/dp-dokumentasjon
+site_url: https://navikt.github.io/dp-dokumentasjon/
 edit_uri: edit/main/docs/
 theme:
   name: material
