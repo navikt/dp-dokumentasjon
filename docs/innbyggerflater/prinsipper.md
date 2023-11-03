@@ -244,11 +244,11 @@ En test er mer en spesifikasjon enn en test. Den skal spesifisere hvordan noe fu
 Det er ikke viktig å teste 100% av koden. Faktisk er det irrelevant hvor mange prosent av koden som er testet. Det viktige er å teste så mye av koden at du føler deg mindre stresset når du distribuerer og refaktorerer koden. Koden bør også være under kontinuerlig utvikling.
 
 Ting å teste:
-
 - Logikk
 - Kode for kartlegging
 - Kontrollører - kontrakten mellom koden og andre systemer
 - Kode som trenger ekstra dokumentasjon
-- Ting å unngå å teste:
+
+Ting å unngå å teste:
 - Tredjepartsbiblioteker
 - Hvis du ender opp med å mocking alt
