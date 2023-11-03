@@ -1,21 +1,28 @@
 # Meldeplikt
 
+## Kort om meldekort
 Når man får DP (Dagpenger, https://www.nav.no/dagpenger), AAP (Arbeidsavklaringspenger, https://www.nav.no/aap) eller TP (Tiltakspenger, https://www.nav.no/tiltakspenger) har man meldeplikt, dvs. man må sende meldekort hver fjortende dag.
 Meldekortet er et skjema man fyller ut, der man gir NAV opplysninger om blant annet jobb, aktiviteter og fravær de siste 14 dagene.
 
 Team Dagpenger "arvet" ansvaret for å gjøre endringer og oppgraderinger i meldekort-løsningen fordi alle fra Team Meldekort ble flyttet til Team Dagpenger.  
 Dagpenger-delen i meldekort-løsningen skal erstattes med dp-rapportering-frontend.  
-Team Dagpenger tenkte å prøve den nye løsningen med begrenset antall brukere først. For å velge brukere som skulle sendes til den nye løsningen, ble opprettet en mekanisme som sjekker hvem som skal sendes:  
-- Det finnes en tabell i meldkort-api sin database som inneholder fødselsnummer  
+Team Dagpenger tenkte å prøve den nye løsningen med begrenset antall brukere først. For å velge brukere som skulle sendes til den nye løsningen, ble opprettet en mekanisme som sjekker hvem som skal sendes:
+- Det finnes en tabell i meldkort-api sin database som inneholder fødselsnummer
 - Hvis fødselsnumeret til bruker er i denne tabellen, sendes brukeren til den nye løsningen
+
+## Arkitektur
+![Meldeplikt arkitektur](meldeplikt.drawio)
 
 
 ## Applikasjoner
-https://github.com/navikt/meldekort (frontend)  
-https://github.com/navikt/meldekort-mikrofrontend  
-https://github.com/navikt/meldekort-api  
-https://github.com/navikt/meldekortservice  
-https://github.com/navikt/meldekortkontroll-api  
+- [Meldekort frontend](https://github.com/navikt/meldekortkontroll-api)
+- [Meldekort mikrofrontend](https://github.com/navikt/meldekortkontroll-api)
+- [Meldekort API](https://github.com/navikt/meldekortkontroll-api)
+- [Meldekortservice](https://github.com/navikt/meldekortkontroll-api)
+- [Meldekortkontroll API  ](https://github.com/navikt/meldekortkontroll-api)
+
+
+
 
 **VIKTIG!**  
 Tekster som vises i meldekort-frontend kommer fra meldekort-api. Vi må vise de tekstene som var gyldige for det valgte meldekortet (for den meldeperioden).  
@@ -46,9 +53,6 @@ INSERT INTO tekst (kode, verdi, sprak,  fra_dato) VALUES ('textKode', 'Text v2 '
 Da skal v1 vises når man har en aktiv meldeperiode som er før 2023-10-29 og v2 skal vises for meldeperioder etter 2023-10-29
 
 
-## Arkitekrur
-
-![Meldeplikt arkitektur](meldeplikt.drawio)
 
 
 ## Utvikling
