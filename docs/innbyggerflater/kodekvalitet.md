@@ -12,12 +12,18 @@ Profesjonelle bruker sine ferdigheter til å skrive kode som andre kan forstå.
 
 ## Hvordan måle kodekvalitet
 
-Vurder en bygning med noen ødelagte vinduer. Hvis vinduene ikke blir reparert, er tendensen at hærverkere ødelegger flere vinduer. Til slutt kan de til og med bryte seg inn i bygningen, og hvis den står tom, kanskje til og med okkupere den eller tenne branner inni.
+![wtf](../media/wtf.png)
 
-James Q. Wilson og George Kelling, 1982 - Teorien om ødelagte vinduer
+>Vurder en bygning med noen ødelagte vinduer. Hvis vinduene ikke blir reparert, er tendensen at hærverkere ødelegger flere vinduer. Til slutt >kan de til og med bryte seg inn i bygningen, og hvis den står tom, kanskje til og med okkupere den eller tenne branner inni.
+>
+>[James Q. Wilson og George Kelling, 1982 - Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
 
 ## Clean code
->Clean code ser alltid ut som om den ble skrevet av noen som bryr seg.
+>*Clean code* ser ut som om den ble skrevet av noen som bryr seg.
+
+`Clean code`
+
+:   Med *clean code* mener vi lesbare kode eller *obvious code*
 
 ### Navngivning
 Navnet på en variabel, funksjon eller klasse bør besvare alle de viktige spørsmålene. Det bør fortelle deg hvorfor det eksisterer, hva det gjør, og hvordan det brukes.
@@ -25,6 +31,7 @@ Navnet på en variabel, funksjon eller klasse bør besvare alle de viktige spør
 Hvis et navn krever en kommentar, avslører ikke navnet sin hensikt.
 
 #### Kall det for det det er.
+>Ikke kall en spade for en spade. Kall en *sandkassespade* for en *sandkassespade* og en *anleggsspade* for en *anleggsspade*. 
 
 ##### Eksempel på dårlig kode
 
@@ -99,17 +106,17 @@ if (erArbeidsforholdAvsluttet())
 ```
 
 ### Struktur
-#### Prinsipp om enkeltansvar
+#### Prinsipp om single responsibility
 
 En klasse/metode skal kun ha én grunn til å bli endret.
 
-[Prinsippet om enkeltansvar](https://en.wikipedia.org/wiki/Single-responsibility_principle)
+[Prinsippet om single responsibility](https://en.wikipedia.org/wiki/Single-responsibility_principle)
 
 #### Små biter
 
 Små klasser og metoder er lettere å teste, gjenbruke og vedlikeholde. Det er også lettere å gi riktige navn til små biter av kode.
 
-Det er minst følgende grunner til å trekke ut kode til en klasse eller metode:
+Det er i  det minste følgende grunner til å trekke ut kode til en klasse eller metode:
 
 - Lesbarhet
 - Testing
@@ -117,20 +124,29 @@ Det er minst følgende grunner til å trekke ut kode til en klasse eller metode:
 
 >Størrelsesregler:
 > 
->Den første regelen for klasser er at de skal være små.
+>**Den første regelen** for klasser er at de skal være små.
 > 
->Den andre regelen for klasser er at de skal være mindre enn det.
+>**Den andre regelen** for klasser er at de skal være mindre enn det.
 
 #### Pakkestruktur
 Pakkestrukturen bør organiseres etter funksjoner/forretningslogikk og ikke tekniske aspekter.
 
+> Strukturen gjorde det også tyngre å resonere rundt endring, og hvordan endringen treffer kodebasen. Større deler av 
+> pakkestrukturen var stort sett alltid involvert.
+>
+> [Hver commit er en ny deploy til prod, del 3 - Terje Heen](https://www.linkedin.com/pulse/hver-commit-er-en-ny-deploy-til-prod-del-3-terje-heen/)
+
+En pakke som inneholder koden til et deldomene bør kunne stå helt på egne bein. Den bør kunne taes ut av applikasjonen og legges inne
+i en annen applikasjon uten store problemer.
+
 ##### Eksempel på dårlig pakkestruktur
-Finn eksempel
+![](../media/teksnisk-struktur.png)
 
 ##### Eksempel på bedre pakkestruktur
-Finn eksempel
+![](../media/feature-struktur.png)
 
 #### Komponentstruktur
+SKAL VI HA NOE HER?
 
 ### Kommentarer
 Tommelfingerregel:
@@ -178,42 +194,49 @@ URI plassering = restUtil.post(fakturaSluttPunkt, faktura);
 
 Hvis vi har åpne API-er som:
 
-- Kode som en delt bibliotek (Javadoc)
+- Kode som en delt bibliotek (KDoc/Javadoc)
 - REST-API-er (OpenAPI-spesifikasjon (OAS))
 
 kan det være en god idé å ha kommentarer.
 
 Eksempel
 
-```java
+```kotlin
+/**
+ * Representerer en aktivitet som er gjort i tilknytning til en hendelse.
+ *
+ * @property melding knyttet til aktiviteten
+ * @property kontekst liste med [Kontekst] for aktiviteten
+ * @property tidsstempel for når aktiviteten ble gjort. Blir automatisk satt til tidspunktet for når
+ * Aktivitet blir laget hvis ikke annet er angitt
+ */
+class Aktivitet(
+    private val melding: String,
+    private val kontekst: List<Kontekst>,
+    private val tidsstempel: LocalDateTime = LocalDateTime.now(),
+) {
 
-@ApiModel
-@Data
-public final class Contact implements BasicLdapEntry {
-    
-    @ApiModelProperty(value = "DN of the contact. This is automatically set.")
-    @Id
-    private Name dn;
-    
-    @ApiModelProperty(value = "National Idenitification Number (NIN). This would be fodselsnummer (11 digits)")
-    @Attribute(name = "cn")
-    private String nin;
-    
-    @ApiModelProperty(value = "First name of the contact.")
-    @Attribute(name = "givenName")
-    private String firstName;
-    
-    @ApiModelProperty(value = "Last name of the contact.")
-    @Attribute(name = "sn")
-    private String lastName;
-...
+    /**
+     * @return meldingen i aktiviteten
+     */
+    fun melding() = melding
+
+    /**
+     * @return tidsstempelet til aktiviteten
+     */
+    fun tidsstempel() = tidsstempel
+
+    /**
+     * @return liste over kontekster knyttet til aktiviteten
+     */
+    fun kontekst() = kontekst
 }
 ```
 
-[Java-dokumentasjonstips og triks | JRebel by Perforce](https://www.jrebel.com/blog/tips-and-tricks-for-better-java-documentation)
+[Document Kotlin code: KDoc](https://kotlinlang.org/docs/kotlin-doc.html)
 
 ### Testing
->Alle vet at feilsøking er dobbelt så vanskelig som å skrive et program i utgangspunktet. Så hvis du er så smart som du kan være når du skriver det, hvordan vil du noensinne feilsøke det?
+>Feilsøking er dobbelt så vanskelig som å skrive et program i utgangspunktet. Så hvis du er så smart som du kan være når du skriver det, hvordan vil du noensinne feilsøke det?
 
 #### Hvorfor tester vi?
 Vi tester fordi:
