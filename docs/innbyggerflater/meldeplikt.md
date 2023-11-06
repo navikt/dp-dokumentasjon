@@ -54,7 +54,7 @@ Da skal v1 vises når man har en aktiv meldeperiode som er før `2023-10-29` og 
 
 ## Utvikling
 
-Vanlig utviklingsprosess:  
+###Vanlig utviklingsprosess
 
 1. Opprett en ny branch  
 2. Gjør nødvendige endringer i denne branchen  
@@ -71,15 +71,15 @@ Vanlig utviklingsprosess:
     - Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch
     - velg miljø Q1 eller Q2, velg bump > Run workflow  
 
-8. Deploy release til prod [1]. For å gjøre dette:  
+8. Deploy release til prod ([Når er det smartest å release til prod?](#når-er-det-smartest-å-release-til-prod)). For å gjøre dette:  
     
     - Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch
     - skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow  
     
-9.  Sjekk at alt fungerer [2]
-10. Oppdater https://confluence.adeo.no/display/TMP/Versjonsoversikt
+9.  Sjekk at alt fungerer ([Overvåkning](#overvåkning))
+10. Oppdater [Confluence](https://confluence.adeo.no/display/TMP/Versjonsoversikt)
 
-**NB!**  
+### Når er det smartest å release til prod?
 Flertallet sender meldekortene sine fra fredag til mandag. 
 Det betyr at det ikke er veldig smart å deploye noe til prod i disse dagene med mindre det er en prodfeil fiks.
 Det er bedre å deploye til prod fra tirsdag til torsdag.
