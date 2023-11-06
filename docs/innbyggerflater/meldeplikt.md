@@ -60,21 +60,21 @@ Vanlig utviklingsprosess:
 2. Gjør nødvendige endringer i denne branchen  
 3. Deploy branchen til Q1 og/eller Q2. For å gjøre dette: 
 
-   1. Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg riktig branch
-   2. Velg miljø Q1 eller Q2 > Run workflow
+    - Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg riktig branch
+    - Velg miljø Q1 eller Q2 > Run workflow
 
 4. Sjekk endringene i Q1 og/eller Q2  
 5. Opprett en pull request  
 6. Når PRen er sjekket, merge branchen til master  
 7. Bygg release. For å gjøre dette:  
    
-    1. Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch
-    2. velg miljø Q1 eller Q2, velg bump > Run workflow  
+    - Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch
+    - velg miljø Q1 eller Q2, velg bump > Run workflow  
 
 8. Deploy release til prod [1]. For å gjøre dette:  
     
-    1. Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch
-    2. skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow  
+    - Åpne GitHub repo > Actions > Deploy release to dev or prod > Run workflow > Velg master branch
+    - skriv inn "p" som Miljø, skriv inn den versjonen som skal deployes > Run workflow  
     
 9.  Sjekk at alt fungerer [2]
 10. Oppdater https://confluence.adeo.no/display/TMP/Versjonsoversikt
