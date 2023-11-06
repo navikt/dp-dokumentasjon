@@ -1,1 +1,1 @@
-# Om Team Innbyggerflate
+# Om innbyggerflate

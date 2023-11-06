@@ -1,4 +1,4 @@
-site_name: Dagpenger
+site_name: Dagpenger - teknisk dokumentasjon
 repo_url: https://github.com/navikt/dp-dokumentasjon
 site_url: https://navikt.github.io/dp-dokumentasjon/
 edit_uri: edit/main/docs/
@@ -20,11 +20,15 @@ theme:
     edit: material/pencil
     view: material/eye
     repo: fontawesome/brands/github
-copyright: Made with ❤️ by Dagpengeklynga
+copyright: ""
 plugins:
   - search
   - glightbox
   - drawio_file
+  - redirects:
+      redirect_maps:
+        'index.md': 'innbyggerflater/README.md'
+
 markdown_extensions:
   - toc:
       permalink: True
@@ -60,9 +64,9 @@ markdown_extensions:
 extra:
   generator: false
 nav:
-  - Team innbyggerflate:
-    - Om teamet: innbyggerflater/README.md
-    - Våre løsninger:
+  - Innbyggerflate:
+    - Om: innbyggerflater/README.md
+    - Løsninger:
       - Systemkart: innbyggerflater/systemkart.md
       - Søknadsdialog: innbyggerflater/soknad.md
       - nav.no: innbyggerflater/nav-no.md
