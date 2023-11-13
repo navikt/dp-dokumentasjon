@@ -1,47 +1,51 @@
 # Prinsipper
 
-![Boy scout rule](../media/boy-scout-rule.png)
+![Boy scout rule](/img/boy-scout-rule.png)
 
 ## Introduksjon
 
 Kode lever. Det er ikke noe man skriver og glemmer. Brukere ønsker nye funksjoner. Feil må fikses. Koden skal være enkel å forstå, selv om du ikke har sett den før eller det har gått lang tid siden du sist så på koden. Dette er grunnen til at kodekvalitet er viktig. Programmering handler mer om å skrive kode som du og dine medarbeidere kan forstå, og mindre om å vise hvor flink du er med programmeringsspråket ditt.
 
->En forskjell mellom en dyktig programmerer og en profesjonell programmerer er at den profesjonelle programmereren forstår at klarhet er viktig.
+> En forskjell mellom en dyktig programmerer og en profesjonell programmerer er at den profesjonelle programmereren forstår at klarhet er viktig.
 
 Profesjonelle bruker sine ferdigheter til å skrive kode som andre kan forstå.
 
 ## Hvordan måle kodekvalitet
 
-![wtf](../media/wtf.png)
+![wtf](/img/wtf.png)
 
->Vurder en bygning med noen ødelagte vinduer. Hvis vinduene ikke blir reparert, er tendensen at hærverkere ødelegger flere vinduer. Til slutt >kan de til og med bryte seg inn i bygningen, og hvis den står tom, kanskje til og med okkupere den eller tenne branner inni.
+> Vurder en bygning med noen ødelagte vinduer. Hvis vinduene ikke blir reparert, er tendensen at hærverkere ødelegger flere vinduer. Til slutt >kan de til og med bryte seg inn i bygningen, og hvis den står tom, kanskje til og med okkupere den eller tenne branner inni.
 >
->[James Q. Wilson og George Kelling, 1982 - Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
+> [James Q. Wilson og George Kelling, 1982 - Broken windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory)
 
 ## Clean code
->*Clean code* ser ut som om den ble skrevet av noen som bryr seg.
+
+> _Clean code_ ser ut som om den ble skrevet av noen som bryr seg.
 
 `Clean code`
 
-:   Med *clean code* mener vi lesbare kode eller *obvious code*
+: Med _clean code_ mener vi lesbare kode eller _obvious code_
 
 ### Navngivning
+
 Navnet på en variabel, funksjon eller klasse bør besvare alle de viktige spørsmålene. Det bør fortelle deg hvorfor det eksisterer, hva det gjør, og hvordan det brukes.
 
 Hvis et navn krever en kommentar, avslører ikke navnet sin hensikt.
 
 #### Kall det for det det er.
->Ikke kall en spade for en spade. Kall en *sandkassespade* for en *sandkassespade* og en *anleggsspade* for en *anleggsspade*. 
+
+> Ikke kall en spade for en spade. Kall en _sandkassespade_ for en _sandkassespade_ og en _anleggsspade_ for en _anleggsspade_.
 
 ##### Eksempel på dårlig kode
 
-```java 
+```java
 public String getOrgNr() {
     String[] split = description.split("-");
 
     return split[0].trim();
 }
 ```
+
 ##### Eksempel på bedre kode
 
 ```java
@@ -60,6 +64,7 @@ public String getOrganisasjonsnummerFraBeskrivelse() {
 NIDPPrincipal up = resolveUserPrincipal();
 UserAuthority ua = nidpPrincipal.getAuthority();
 ```
+
 ##### Eksempel på bedre kode
 
 ```java
@@ -77,6 +82,7 @@ class FakturaService {
 ...
 }
 ```
+
 ##### Eksempel på bedre kode
 
 ```java
@@ -85,7 +91,6 @@ class FakturaService {
 }
 
 ```
-
 
 ```java
 for(int i=0;i< 10;i++){
@@ -106,6 +111,7 @@ if (erArbeidsforholdAvsluttet())
 ```
 
 ### Struktur
+
 #### Prinsipp om single responsibility
 
 En klasse/metode skal kun ha én grunn til å bli endret.
@@ -116,22 +122,23 @@ En klasse/metode skal kun ha én grunn til å bli endret.
 
 Små klasser og metoder er lettere å teste, gjenbruke og vedlikeholde. Det er også lettere å gi riktige navn til små biter av kode.
 
-Det er i  det minste følgende grunner til å trekke ut kode til en klasse eller metode:
+Det er i det minste følgende grunner til å trekke ut kode til en klasse eller metode:
 
 - Lesbarhet
 - Testing
 - Gjenbruk
 
->Størrelsesregler:
-> 
->**Den første regelen** for klasser er at de skal være små.
-> 
->**Den andre regelen** for klasser er at de skal være mindre enn det.
+> Størrelsesregler:
+>
+> **Den første regelen** for klasser er at de skal være små.
+>
+> **Den andre regelen** for klasser er at de skal være mindre enn det.
 
 #### Pakkestruktur
+
 Pakkestrukturen bør organiseres etter funksjoner/forretningslogikk og ikke tekniske aspekter.
 
-> Strukturen gjorde det også tyngre å resonere rundt endring, og hvordan endringen treffer kodebasen. Større deler av 
+> Strukturen gjorde det også tyngre å resonere rundt endring, og hvordan endringen treffer kodebasen. Større deler av
 > pakkestrukturen var stort sett alltid involvert.
 >
 > [Hver commit er en ny deploy til prod, del 3 - Terje Heen](https://www.linkedin.com/pulse/hver-commit-er-en-ny-deploy-til-prod-del-3-terje-heen/)
@@ -140,17 +147,22 @@ En pakke som inneholder koden til et deldomene bør kunne stå helt på egne bei
 i en annen applikasjon uten store problemer.
 
 ##### Eksempel på dårlig pakkestruktur
-![](../media/teksnisk-struktur.png)
+
+![](/img/teksnisk-struktur.png)
 
 ##### Eksempel på bedre pakkestruktur
-![](../media/feature-struktur.png)
+
+![](/img/feature-struktur.png)
 
 #### Komponentstruktur
+
 SKAL VI HA NOE HER?
 
 ### Kommentarer
+
 Tommelfingerregel:
->Kodekommentarer er potensielle løgner!
+
+> Kodekommentarer er potensielle løgner!
 
 Tommelfingerregelen er at kommentarer ikke bør brukes. Hvis du befinner deg i en situasjon der du ønsker å skrive en kommentar, er det sannsynligvis noe galt med koden din.
 
@@ -162,6 +174,7 @@ if (salgsordregruppeBeskrivelse == null || salgsordregruppeBeskrivelse.length() 
     return "";
 }
 ```
+
 ##### Eksempel på bedre kode
 
 ```java
@@ -174,7 +187,8 @@ privat boolean erSalgsordregruppeBeskrivelseTom() {
 ```
 
 #### Når kommentarer er nødvendige
->Kommentarer er, i beste fall, en nødvendig ondskap.
+
+> Kommentarer er, i beste fall, en nødvendig ondskap.
 
 I noen tilfeller er kommentarer nødvendige:
 
@@ -236,9 +250,11 @@ class Aktivitet(
 [Document Kotlin code: KDoc](https://kotlinlang.org/docs/kotlin-doc.html)
 
 ### Testing
->Feilsøking er dobbelt så vanskelig som å skrive et program i utgangspunktet. Så hvis du er så smart som du kan være når du skriver det, hvordan vil du noensinne feilsøke det?
+
+> Feilsøking er dobbelt så vanskelig som å skrive et program i utgangspunktet. Så hvis du er så smart som du kan være når du skriver det, hvordan vil du noensinne feilsøke det?
 
 #### Hvorfor tester vi?
+
 Vi tester fordi:
 
 - Billigere / raskere å finne feilen tidlig i utviklingsprosessen
@@ -250,6 +266,7 @@ Vi tester fordi:
 - Bedre kode
 
 #### Egenskapene til gode tester
+
 En test er mer en spesifikasjon enn en test. Den skal spesifisere hvordan noe fungerer.
 
 - Må være raske (vanligvis millisekunder)
@@ -262,8 +279,8 @@ En test er mer en spesifikasjon enn en test. Den skal spesifisere hvordan noe fu
 - Unngå å bruke rammeverk hvis mulig (for eksempel Spring)
 - Testene må alltid kjøres før koden sjekkes inn i versjonskontrollen
 
-
 #### Hvor mye av en applikasjon skal testes
+
 Det er ikke viktig å teste 100% av koden. Faktisk er det irrelevant hvor mange prosent av koden som er testet. Det viktige er å teste så mye av koden at du føler deg mindre stresset når du distribuerer og refaktorerer koden. Koden bør også være under kontinuerlig utvikling.
 
 Ting å teste:
