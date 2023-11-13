@@ -1,6 +1,6 @@
 # Prinsipper
 
-![Boy scout rule](/img/boy-scout-rule.png)
+![Boy scout rule](./boy-scout-rule.png)
 
 ## Introduksjon
 
