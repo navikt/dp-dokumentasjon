@@ -9,7 +9,7 @@
 
 https://teamdagpenger.intern.nav.no bruker [Docusaurus](https://docusaurus.io/docs). Docusaurus gjør det enklet å kombinere enkel dokumentasjon med mer dynamiske elementer.
 
-Dokumenter på https://teamdagpenger.intern.nav.no er markdown filer som legges under `docs/` mappen ([lenke](https://github.com/navikt/teamdagpenger/tree/main/docs)).
+Dokumenter på https://teamdagpenger.intern.nav.no er markdown filer som legges under `docs/` mappen ([lenke](https://github.com/navikt/dp-dokumentasjon/tree/main/docs)).
 
 Markdown er et lettvekts-format som gjør det lett å lage nettsider ([Se her](https://www.markdownguide.org/cheat-sheet/)). Markdown er mye brukt dokumentasjons-format i NAV.
 

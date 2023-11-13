@@ -16,11 +16,11 @@ const config = {
   url: "https://navikt.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/teamdagpenger",
+  baseUrl: "/dp-dokumentasjon",
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "navikt", // Usually your GitHub org/user name.
-  projectName: "teamdagpenger", // Usually your repo name.
+  projectName: "dp-dokumentasjon", // Usually your repo name.
   deploymentBranch: "main",
   trailingSlash: false,
 
@@ -50,7 +50,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/navikt/teamdagpenger",
+          editUrl: "https://github.com/navikt/dp-dokumentasjon",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -78,7 +78,7 @@ const config = {
           },
 
           {
-            href: "https://github.com/navikt/teamdagpenger",
+            href: "https://github.com/navikt/dp-dokumentasjon",
             label: "GitHub",
             position: "right",
           },
