@@ -12,7 +12,7 @@ Profesjonelle bruker sine ferdigheter til å skrive kode som andre kan forstå.
 
 ## Hvordan måle kodekvalitet
 
-![wtf](/img/wtf.png)
+![wtf](./wtf.png)
 
 > Vurder en bygning med noen ødelagte vinduer. Hvis vinduene ikke blir reparert, er tendensen at hærverkere ødelegger flere vinduer. Til slutt >kan de til og med bryte seg inn i bygningen, og hvis den står tom, kanskje til og med okkupere den eller tenne branner inni.
 >
@@ -148,11 +148,11 @@ i en annen applikasjon uten store problemer.
 
 ##### Eksempel på dårlig pakkestruktur
 
-![](/img/teksnisk-struktur.png)
+![](./teksnisk-struktur.png)
 
 ##### Eksempel på bedre pakkestruktur
 
-![](/img/feature-struktur.png)
+![](./feature-struktur.png)
 
 #### Komponentstruktur
 

@@ -106,7 +106,3 @@ NAV-organisasjonen på GitHub heter navikt, og for å få tilgang til denne må 
 4. Velg “GitHub.com”.
 5. Gå tilbake til forsiden av myapps og vent til GitHub.com appen dukker opp, dette kan ta noen minutter.
 6. Klikk på den installerte appen, eller gå direkte til https://github.com/orgs/navikt/sso, og følg SSO-flyten for å få tilgang til navikt på GitHub.
-
-```
-
-```
