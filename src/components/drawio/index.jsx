@@ -7,9 +7,7 @@ export const Drawio = React.memo(({ filename }) => {
   useEffect(() => {
     const fetchDrawioFile = async () => {
       try {
-        const module = await import(
-          `!!raw-loader!@site/static/drawio/${filename}.drawio`
-        );
+        const module = await import(`!!raw-loader!@site/docs/${filename}`);
         setDrawioFileContent(module.default);
       } catch (error) {
         console.error(`Error loading drawio file: ${error}`);

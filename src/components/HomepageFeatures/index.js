@@ -33,7 +33,6 @@ const FeatureList = [
 ];
 
 function Feature({ Svg, SvgDark, title, description, link, dark }) {
-  console.log("DARK: ", dark);
   return (
     <Link href={link} className={clsx("col col--4 margin-horiz--md card")}>
       <div className="text--center">
@@ -53,8 +52,6 @@ function Feature({ Svg, SvgDark, title, description, link, dark }) {
 
 export default function HomepageFeatures() {
   const { colorMode } = useColorMode();
-
-  console.log("color: ", colorMode);
 
   return (
     <section className={styles.features}>
