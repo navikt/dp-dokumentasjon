@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdp_dokumentasjon=self.webpackChunkdp_dokumentasjon||[]).push([[3429],{3429:(e,n,a)=>{a.r(n),a.d(n,{default:()=>d});const d="# Sak og behandling\n\nDette er dummy data\n"}}]);
