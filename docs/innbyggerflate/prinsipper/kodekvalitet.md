@@ -1,4 +1,4 @@
-# Prinsipper
+# Kodekvalitet
 
 ![Boy scout rule](./boy-scout-rule.png)
 

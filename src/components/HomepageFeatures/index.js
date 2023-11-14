@@ -56,7 +56,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={styles.featureRow + " row"}>
           {FeatureList.map((props, idx) => (
             <Feature dark={colorMode === "dark"} key={idx} {...props} />
           ))}
