@@ -70,7 +70,7 @@ Da skal v1 vises når man har en aktiv meldeperiode som er før `2023-10-29` og 
 7. Bygg release. For å gjøre dette:
 
    - Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch
-   - velg miljø Q1 eller Q2, velg bump > Run workflow
+   - Velg miljø Q1 eller Q2, velg bump > Run workflow
 
 8. Deploy release til prod ([Når er det smartest å release til prod?](#når-er-det-smartest-å-release-til-prod)). For å gjøre dette:
 
@@ -86,13 +86,13 @@ Flertallet sender meldekortene sine fra fredag til mandag.
 Det betyr at det ikke er veldig smart å deploye noe til prod i disse dagene med mindre det er en prodfeil fiks.
 Det er bedre å deploye til prod fra tirsdag til torsdag.
 
-![](/img/meldeplikt-innsendte.png)
+![](/img/meldeplikt-innsendte.png)  
 _Antall REST-kall for å kontrollere meldekort per ukedag fra mandag til søndag_
 
 ## Oppdatering
 
 Alle applikasjonene i meldeplikt-løsningen har dependabot som hver uke sjekker om det finnes nye versjonene til avhengighetene vi bruker.
-Dependabot oppretter pull request'er og utviklere må merge disse PRene til master, sjekke at appene bygges og alt fungerer i Q1/Q2, deretter opprette release og deploye til prod.
+Dependabot oppretter pull request'er og utviklere må merge disse PRene til master, sjekke at appene bygges og alt fungerer i Q1 og/eller Q2 (det er også lurt å sjekke at nye poder virkelig har startet etter oppdateringer), deretter opprette release og deploye til prod.
 
 ## Overvåkning
 
