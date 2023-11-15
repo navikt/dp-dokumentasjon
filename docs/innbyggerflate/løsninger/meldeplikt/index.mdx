@@ -9,7 +9,7 @@ Meldekortet er et skjema man fyller ut, der man gir NAV opplysninger om blant an
 
 Team Dagpenger "arvet" ansvaret for å gjøre endringer og oppgraderinger i meldekort-løsningen fordi alle fra Team Meldekort ble flyttet til Team Dagpenger. Dagpenger-delen i meldekort-løsningen skal erstattes med `dp-rapportering-frontend`. Team Dagpenger tenkte å prøve den nye løsningen med begrenset antall brukere først. For å velge brukere som skulle sendes til den nye løsningen, ble opprettet en mekanisme som sjekker hvem som skal sendes:
 
-- Det finnes en tabell i meldkort-api sin database som inneholder fødselsnummer
+- Det finnes en tabell i `meldkort-api` sin database som inneholder fødselsnummer
 - Hvis fødselsnumeret til bruker er i denne tabellen, sendes brukeren til den nye løsningen
 
 ## Arkitektur
@@ -18,14 +18,14 @@ Team Dagpenger "arvet" ansvaret for å gjøre endringer og oppgraderinger i meld
 
 ## Applikasjoner
 
-- [Meldekort frontend](https://github.com/navikt/meldekortkontroll-api)
-- [Meldekort mikrofrontend](https://github.com/navikt/meldekortkontroll-api)
-- [Meldekort API](https://github.com/navikt/meldekortkontroll-api)
-- [Meldekortservice](https://github.com/navikt/meldekortkontroll-api)
+- [Meldekort frontend](https://github.com/navikt/meldekort)
+- [Meldekort mikrofrontend](https://github.com/navikt/meldekort-mikrofrontend)
+- [Meldekort API](https://github.com/navikt/meldekort-api)
+- [Meldekortservice](https://github.com/navikt/meldekortservice)
 - [Meldekortkontroll API ](https://github.com/navikt/meldekortkontroll-api)
 
 **VIKTIG!**  
-Tekster som vises i meldekort-frontend kommer fra `meldekort-api`. Vi må vise de tekstene som var gyldige for det valgte meldekortet (for den meldeperioden). Det finnes fortsatt 2 filer med tekster i meldekort (`src\app\mock\responses\tekster_nb.json og src\app\mock\responses\tekster_en.json`), men disse er ment for lokalkjøring/testing og inneholder ikke alle/siste versjoner av tekstene.  
+Tekster som vises i `meldekort` (frontend) kommer fra `meldekort-api`. Vi må vise de tekstene som var gyldige for det valgte meldekortet (for den meldeperioden). Det finnes fortsatt 2 filer med tekster i `meldekort` (`src\app\mock\responses\tekster_nb.json og src\app\mock\responses\tekster_en.json`), men disse er ment for lokalkjøring/testing og inneholder ikke alle/siste versjoner av tekstene.  
 `meldekort-api` har en tabell med tekstene i sin database. Denne tabellen er fylt ut ved hjelp av `R__recreate_texts-migrasjonen` og har disse kolonnene:
 
 - `kode`
