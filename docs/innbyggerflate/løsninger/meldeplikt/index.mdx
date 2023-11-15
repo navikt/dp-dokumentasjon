@@ -89,6 +89,11 @@ Det er bedre å deploye til prod fra tirsdag til torsdag.
 ![](/img/meldeplikt-innsendte.png)
 _Antall REST-kall for å kontrollere meldekort per ukedag fra mandag til søndag_
 
+## Oppdatering
+
+Alle applikasjonene i meldeplikt-løsningen har dependabot som hver uke sjekker om det finnes nye versjonene til avhengighetene vi bruker.
+Dependabot oppretter pull request'er og utviklere må merge disse PRene til master, sjekke at appene bygges og alt fungerer i Q1/Q2, deretter opprette release og deploye til prod.
+
 ## Overvåkning
 
 - [Nyttig Grafana dashboard for å sjekke at alt fungerer og meldekort kommer inn](https://grafana.nais.io/d/rPG4uUC7k/meldekort-api?orgId=1&refresh=30s)
