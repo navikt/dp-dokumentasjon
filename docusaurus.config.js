@@ -40,7 +40,11 @@ const config = {
     mermaid: true,
   },
   staticDirectories: ["static"],
-
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Architects+Daughter',
+    },
+  ],
   presets: [
     [
       "classic",
