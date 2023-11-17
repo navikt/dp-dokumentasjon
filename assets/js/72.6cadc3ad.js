@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdp_dokumentasjon=self.webpackChunkdp_dokumentasjon||[]).push([[72],{72:(n,s,e)=>{e.r(s),e.d(s,{default:()=>o});const o="---\nsidebar_position: 2\n---\n\n# Nav.no\n"}}]);

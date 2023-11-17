@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdp_dokumentasjon=self.webpackChunkdp_dokumentasjon||[]).push([[9949],{9949:(n,e,r)=>{r.r(e),r.d(e,{default:()=>o});const o='import { Drawio } from "@site/src/components/drawio";\n\n# L\xf8sninger\n\n## Overordnet arkitektur\n\n<Drawio filename="innbyggerflate/losninger/overordnet-arkitektur.drawio" />\n'}}]);

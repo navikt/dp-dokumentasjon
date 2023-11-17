@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdp_dokumentasjon=self.webpackChunkdp_dokumentasjon||[]).push([[597],{597:(e,n,s)=>{s.r(n),s.d(n,{default:()=>p});const p="# Rapportering\n"}}]);
