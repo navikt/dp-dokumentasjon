@@ -73,7 +73,7 @@ Du bruker Drawio-diagrammer på samme måte som en vanlig React-komponent, som b
 import { Drawio } from "@site/src/components/drawio";
 
 
-<Drawio filename={"innbyggerflate/løsninger/meldeplikt/meldeplikt.drawio"} />
+<Drawio filename={"innbyggerflate/losninger/meldeplikt/meldeplikt.drawio"} />
 ```
 
 #### 8. Bruk Mermaid for Diagrammer
