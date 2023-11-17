@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+---
+
+# Sanity
+
+Vi bruker Sanity som CMS for ikke-innloggede sider og innloggede sider for dagpenger.
+
+## Formål
+
+I Sanity ønsker vi å samle alt innhold som innholdsteamet skal kunne redigere.
+
+## Teknologier
+
+- Sanity: v3
+- Node: lts/\*
+
+## App-arkitektur
+
+Prosjektet er delt i 5 seksjoner:
+
+- Dagpengersøknad
+- Mine dagpenger (innsyn)
+- Rapportering
+- Saksbehandling
+- Produktside
+
+```mermaid
+flowchart TB
+    dp-soknadsdialog-->Sanity;
+    dp-dagpenger-->Sanity;
+    dp-rapportering-frontend-->Sanity;
+    dp-faktasider-frontend-->Sanity;
+    dp-produktside-frontend-->Sanity;
+```
+
+TODO:
+
+- Hvordan fungerer applikasjonen internt?
+- Hvilke andre applikasjoner kommuniserer denne direkte med?
+
+## Utfordringer
+
+TODO: Hvilke utfordringer har denne applikasjonen? F.eks. med hvordan den er strukturert, vanskelig å oppgradere, utdaterte avhengigheter
+
+## Lenker
+
+- [Github](https://github.com/navikt/dp-sanity-cms-v3)
+- Grafana Faro
+- Amplitude
+- Oppgaver i favro
+- Annen bakgrunnsinformasjon
