@@ -1,2 +1,8 @@
 beskrivelse: Bladi bladi bladi
 type: frontend
+test:  
+  - test
+  - test
+foo:
+  bar: foo-bar
+  
