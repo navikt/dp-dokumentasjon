@@ -114,17 +114,17 @@ Dependabot oppretter pull request'er og utviklere må merge disse PRene til mast
 > Logg slettes etter 30 dager i `meldekorservice`, 90 dager i `meldekort-api`, 120 dager i `meldekortkontroll-api`.
 
 ## Nyttige kommandoer
-Husk at `meldekorservice` og `meldekortkontroll-api` er i FSS.
-For å velge FSS:
-`kubectl config use-context dev-fss`
+Husk at `meldekorservice` og `meldekortkontroll-api` er i FSS.  
+For å velge FSS:  
+`kubectl config use-context dev-fss`  
 `kubectl config use-context prod-fss`
 
-For å velge GCP:
-`kubectl config use-context dev-gcp`
+For å velge GCP:  
+`kubectl config use-context dev-gcp`  
 `kubectl config use-context prod-gcp`
 
-For å få en liste med poder
+For å få en liste med poder:  
 `kubectl get pods -n meldekort`
 
-For å se logg fra en pod:
+For å se logg fra en pod:  
 `kubectl logs -n meldekort %NAVNET_TIL_PODEN%`
