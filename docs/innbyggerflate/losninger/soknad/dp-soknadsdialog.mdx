@@ -16,7 +16,7 @@ spesielt _dp-soknad_, _dp-mellomlagring_ og _dp-quiz_.
 
 ## App-arkitektur
 
-### Søknadsveileder
+### Inngangssiden
 
 Når bruker kommer inn på https://www.nav.no/dagpenger/dialog/soknad sjekker vi om bruker fullført- eller påbegynte søknader og om bruker er registert som arbeidssøker. Dette gjør for å kunne vise bruker riktig informasjon eller redirecte bruker til riktig sider. Slik ser flyten ut:
 
@@ -36,12 +36,11 @@ FORSETT_ELLER_SLETT_SOKNAD --> FORTSETTSOKNAD([Fortsett påbegynte søknad])
 FORTSETTSOKNAD --> REDIRECT_SOKNAD[Sende bruker til søknaden]
 
 FORSETT_ELLER_SLETT_SOKNAD --> SLETT_SOKNAD([Slett og start ny søknad])
-SLETT_SOKNAD --> SLETT_SOKNAD_OK[Sletter søknad]
-SLETT_SOKNAD_OK --> ER_REGISTERT_SOM_ARBEIDSSOKER
+SLETT_SOKNAD --> | Sletter søknad i dp-soknad| ER_REGISTERT_SOM_ARBEIDSSOKER
 
 START_NY_SOKNAD --> ER_REGISTERT_SOM_ARBEIDSSOKER
-ER_REGISTERT_SOM_ARBEIDSSOKER -->|Yes| REDIRECT_START_SOKNAD["Redirect til /soknad/start-soknad"]
-ER_REGISTERT_SOM_ARBEIDSSOKER -->|No| REDIRECT_ARBEIDSSOKER["Redirect til /soknad/arbeidssoker"]
+ER_REGISTERT_SOM_ARBEIDSSOKER -->|Yes| REDIRECT_START_SOKNAD["Redirect til ../soknad/start-soknad"]
+ER_REGISTERT_SOM_ARBEIDSSOKER -->|No| REDIRECT_ARBEIDSSOKER["Redirect til ../soknad/arbeidssoker"]
 ```
 
 ### Slik fungerer løsningen
