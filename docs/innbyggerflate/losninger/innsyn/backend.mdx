@@ -1,41 +1,61 @@
 ---
 sidebar_position: 1
+title: Backend
 ---
 
-# Backend
+# dp-innsyn
 
-Vi bruker Sanity som CMS for ikke-innloggede sider og innloggede sider for dagpenger.
+Dette er hovedsakelig backend-løsninger for [**`dp-dagpenger`**][dp-dagpenger] . I tillegg tilbyr denne applikasjonen spesifikke endepunkter for både [**`dp-soknad`**][dp-soknad] og [**`aia-backend`**][aia-backend] eid av paw-teamet.
 
 ## Formål
 
-I Sanity ønsker vi å samle alt innhold som innholdsteamet skal kunne redigere.
+[**`dp-innsyn`**][dp-innsyn] er utviklet for å forenkle prosessen med å hente informasjon relatert til søknader og vedtak. Kjernefunksjonene omfatter å hente innsendte og pågående søknader, hente vedtak samt innhente behandlingsstatus for søknader. I tillegg håndterer applikasjonen hendelser relatert til søknader, vedtak og journaler ved hjelp av hendelsesmottak.
 
 ## Teknologier
 
+- Kotlin
+- Gradle
+- Ktor
+- Rapids and rivers
+- Postgres
+- JUnit
+
 ## App-arkitektur
+
+### API
 
 ```mermaid
 flowchart TB
-    dp-soknadsdialog-->Sanity;
-    dp-dagpenger-->Sanity;
-    dp-rapportering-frontend-->Sanity;
-    dp-faktasider-frontend-->Sanity;
-    dp-produktside-frontend-->Sanity;
+ InnsynAPI --> /soknad
+ InnsynAPI --> /paabegynte
+ InnsynAPI --> /vedtak
+ InnsynAPI --> /behandlingsstatus
 ```
 
-TODO:
+### Mottak
 
-- Hvordan fungerer applikasjonen internt?
-- Hvilke andre applikasjoner kommuniserer denne direkte med?
+- SøknadMottak
+  > Tar imot søknader og håndterer relaterte hendelser ved å lagre informasjonen i persontabellen.
+- VedtakMottak
+  > Tar imot vedtak og håndterer relaterte hendelser ved å lagre informasjonen i persontabellen.
+- JournalpostMottak
+  > Tar imot journalposter og håndterer relaterte hendelser ved å lagre informasjonen i persontabellen.
 
-## Utfordringer
+### Oppslag
 
-TODO: Hvilke utfordringer har denne applikasjonen? F.eks. med hvordan den er strukturert, vanskelig å oppgradere, utdaterte avhengigheter
+- PåbegyntOppslag
+  > Henter påbegynte søknader fra [**`dp-soknad`**][dp-soknad].
 
 ## Lenker
 
-- [Github](https://github.com/navikt/dp-sanity-cms-v3)
-- Grafana Faro
-- Amplitude
-- Oppgaver i favro
-- Annen bakgrunnsinformasjon
+- [dp-innsyn][dp-innsyn]
+- [dp-soknad][dp-soknad]
+- [dp-dagpenger][dp-dagpenger]
+- [aia-backend][aia-backend]
+
+<!-- Lenker -->
+
+[dp-innsyn]: https://github.com/navikt/dp-innsyn
+[dp-soknad]: https://github.com/navikt/dp-soknad
+[dp-dagpenger]: https://github.com/navikt/dp-dagpenger
+[aia-backend]: https://github.com/navikt/aia-backend
