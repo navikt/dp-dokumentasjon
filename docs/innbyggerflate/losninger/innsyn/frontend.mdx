@@ -23,13 +23,33 @@ Denne applikasjonen har bare èn side.
 
 ### Sidestruktur
 
-- PageHero
-- Soknader
-- AccountNumber
-- MeldFraOmEndring
-- Shortcut
-- JoirnalpostList
-- NosessionModal
+#### PageHero
+
+Side titel med arbeidssøkerstatus vi henter fra. Arbeidssøkerstatus er informasjon om bruker er registrert som arbeidssøker og det kan være enten "registert" eller "ikke registert".
+
+#### Soknader
+
+Lister over påbegynte og fullførte søknader siste 12 uker. Bruker kan fortsette med søknaden fra påbegynte søknader. Fullførte søknader har bruker muligheter for å se søknaden eller ettersende dokumenter.
+
+#### AccountNumber
+
+Vise kontonummer henter fra [Sokos kontoregister for person](https://github.com/navikt/sokos-kontoregister-person). Dersom bruker ikke har registert tidligere vil bruker får mulighet for å gjøre det.
+
+#### MeldFraOmEndring
+
+Denne seksjonen kan bruker sende melding til NAV eller sende inn dokument (Generell innsending)
+
+#### Shortcut
+
+Snarveier til **Send klage**, **Spørsmål om saken din**, **Forskudd på dagpenger** og **Ny søknad**
+
+#### JournalpostList
+
+Lister over dokumenter bruker har sendt inn tidligere med mulighet for å laste ned eller forhåndvise.
+
+#### NosessionModal
+
+Den viser en modal når sesjon er utløpt. Sesjonen varer 30 minutter.
 
 ### Eksterne tjenester / Netverkskart
 
@@ -47,9 +67,11 @@ TODO:
 ## Utfordringer
 
 - Dokument håntering er vanskelig å forstår. Denne trenger omskriving/opprydding.
+  - Kompleksiteten ligger mest i [Backend for Frontend](https://github.com/navikt/dp-dagpenger/blob/main/src/pages/api/dokumenter/index.ts)
 - Vanskelig å oppdatere til neste Next og MSW.
 - Bruker har ikke mulighet å følge med på søknadsstatus.
-- Denne applikasjonen mangler oppsett for Faro
+- Denne applikasjonen mangler oppsett for Faro.
+- Ettersending av dokumenter kan gjøres kun èn gang. Dette må vi dobbeltsjekke om det fortsatt er en feil!
 
 ## Lenker
 
