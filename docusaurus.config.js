@@ -10,7 +10,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Dagpenger - teknisk dokumentasjon",
   tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.svg",
 
   // Set the production url of your site here
   url: "https://navikt.github.io",
@@ -42,7 +42,7 @@ const config = {
   staticDirectories: ["static"],
   stylesheets: [
     {
-      href: 'https://fonts.googleapis.com/css2?family=Architects+Daughter',
+      href: "https://fonts.googleapis.com/css2?family=Architects+Daughter",
     },
   ],
   presets: [
