@@ -6,6 +6,9 @@ title: Backend
 # dp-rapportering
 
 ## Formål
+- Levere endepunkter som gjør det mulig å hente, opprette, godkjenne, avgodkjenne og korrigere rapporteringsperioder, samt rapportering og sletting av aktiviteter for en gitt rapporteringsperiode. Endepunktene benyttes av [**`dp-rapportering-frontend`**][dp-rapportering-frontend] og [**`dp-saksbehandling-frontend`**][dp-saksbehandling-frontend] som eksponerer funksjonalitetene til henholdvis bruker og saksbehandler
+- Oppretter rapporteringsplikt for dagpengesøkere og dermed også rapporteringsperioder
+- Sende ut melding om at en rapporteringsperiode er innsendt, denne meldingen håndteres av [**`dp-vedtak`**][dp-vedtak]
 
 ## Teknologier
 
@@ -13,8 +16,18 @@ title: Backend
 
 ## App-arkitektur
 
+### API
+Appen bruker OpenAPI for å definere og dokumentere API-et. OpenAPI-spesifikasjonen ligger i [**`rapportering-api.yaml`**][rapportering-api.yaml] filen og dokumentasjonen kan du finne to steder:
+1. Åpen versjon på GitHub Pages: https://navikt.github.io/dp-rapportering/
+2. Interaktiv versjon som krever naisdevice: https://dp-rapportering.intern.dev.nav.no/rapportering
+
 ## Utfordringer
 
 TODO: Hvilke utfordringer har denne applikasjonen? F.eks. med hvordan den er strukturert, vanskelig å oppgradere, utdaterte avhengigheter
 
 ## Lenker
+
+[dp-rapportering-frontend]: https://github.com/navikt/dp-rapportering-frontend
+[dp-saksbehandling-frontend]: https://github.com/navikt/dp-saksbehandling-frontend
+[rapportering-api.yaml]: https://github.com/navikt/dp-rapportering/blob/main/openapi/src/main/resources/rapportering-api.yaml
+[dp-vedtak]: https://github.com/navikt/dp-vedtak
