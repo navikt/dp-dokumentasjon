@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdp_dokumentasjon=self.webpackChunkdp_dokumentasjon||[]).push([[945],{945:(n,e,s)=>{s.r(e),s.d(e,{default:()=>o});const o="---\nsidebar_position: 5\n---\n\n# Rapportering\n"}}]);
