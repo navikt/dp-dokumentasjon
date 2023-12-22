@@ -21,6 +21,32 @@ Appen bruker OpenAPI for å definere og dokumentere API-et. OpenAPI-spesifikasjo
 1. Åpen versjon på GitHub Pages: https://navikt.github.io/dp-rapportering/
 2. Interaktiv versjon som krever naisdevice: https://dp-rapportering.intern.dev.nav.no/rapportering
 
+### Mottak
+#### SøknadMottak
+> Behandler "innsending_ferdigstilt" event for type "NySøknad" som blir sendt fra [**`dp-mottak`**][dp-mottak]. Vi henter eller oppretter Person med søknadens ident. Person får rapporteringsplikt av type "ingen" ved opprettelse. For å opprette rapporteringsplikt av type "søknad" for personen trenger vi søknadstidspunktet. Det blir sendt ut et behov "Søknadstidspunkt" som [**`dp-soknad`**][dp-soknad] løser.
+#### RapporteringspliktDatoMottak
+> Mottar løsning av behov "Søknadstidspunkt". Det blir nå opprettet rapporteringsplikt av type "søknad" for personen fra og med søknadstidspunktet. Det blir også opprettet en rapporteringsperiode.
+#### VedtakMottak
+> Behandler "dagpenger_innvilget" og "dagpenger_avslått" event som blir sendt fra [**`dp-vedtak`**][dp-vedtak]. Ved innvilgelse får person rapporteringsplikt av type "vedtak", ved avslag har ikke person lenger rapporteringsplikt og får derfor rapporteringsplikt av type "ingen". Fra og med datoen for rapporteringsplikten blir satt til virkningsdatoen til vedtaket.
+#### RapporteringMellomlagretMottak
+> Når bruker godkjenner en rapporteringsperiode blir det sendt ut et behov "MellomlagreRapportering" som [**`dp-behov-soknad-pdf`**][dp-behov-soknad-pdf] håndterer i [**`RapporteringPdfBehovLøser`**][RapporteringPdfBehovLøser]. RapporteringMellomlagretMottak mottar løsningen av dette behovet, og det blir nå sendt ut et behov "JournalføreRapportering" som [**`dp-behov-journalforing`**][dp-behov-journalforing] håndterer i [**`RapporteringJournalføringBehovLøser`**][RapporteringJournalføringBehovLøser].
+#### RapporteringJournalførtMottak
+> Mottar løsning av behov "JournalføreRapportering", per nå gjør vi ikke noe annet enn å logge og registrere i aktivitetsloggen at det er journalført.
+
+### Jobber som kjører regelmessig
+#### InnsendingsJobb
+> Rapporteringsperiodene til personer som har fått innvilget dagpenger må sendes til beregning. Denne jobben kjører hvert 15e minutt og finner først alle personer som har gdokjente rapporteringsperioder. Dersom personen har rapporteringsplikt av type "vedtak" finner vi alle rapporteringsperioder som er relevante, det vil si rapporteringsperioder som gjelder for det tidspunktet personen har hatt innvilgelse av dagpenger. Dersom beregningsdatoen for disse rapporteringsperiodene er passert, setter vi tilstanden til "Innsendt" og det blir sendt ut en melding om "rapporteringsperiode_innsendt_hendelse" som [**`dp-vedtak`**][dp-vedtak] håndterer.
+#### NyRapporteringssyklusJobb
+> Denne jobben kjører hver mandag. Den finner alle personer som har rapporteringsplikt av type "søknad" eller "vedtak" og oppretter en ny rapporteringsperiode for disse.
+
+## Domene
+### Rapporteringsperiode
+To be continued...
+### Rapporteringsplikt
+To be continued...
+### Aktivitet
+To be continued...
+
 ## Utfordringer
 
 TODO: Hvilke utfordringer har denne applikasjonen? F.eks. med hvordan den er strukturert, vanskelig å oppgradere, utdaterte avhengigheter
@@ -31,3 +57,9 @@ TODO: Hvilke utfordringer har denne applikasjonen? F.eks. med hvordan den er str
 [dp-saksbehandling-frontend]: https://github.com/navikt/dp-saksbehandling-frontend
 [rapportering-api.yaml]: https://github.com/navikt/dp-rapportering/blob/main/openapi/src/main/resources/rapportering-api.yaml
 [dp-vedtak]: https://github.com/navikt/dp-vedtak
+[dp-mottak]: https://github.com/navikt/dp-mottak
+[dp-soknad]: https://github.com/navikt/dp-soknad
+[dp-behov-soknad-pdf]: https://github.com/navikt/dp-behov-soknad-pdf
+[RapporteringPdfBehovLøser]: https://github.com/navikt/dp-behov-soknad-pdf/blob/bc861b3bfa92b68e23943055a587d0a1b4aba9e7/src/main/kotlin/no/nav/dagpenger/innsending/l%C3%B8sere/RapporteringPdfBehovL%C3%B8ser.kt#L34
+[dp-behov-journalforing]: https://github.com/navikt/dp-behov-journalforing
+[RapporteringJournalføringBehovLøser]: https://github.com/navikt/dp-behov-journalforing/blob/cea548ce3be1671b0d2ffbbe9860c4f044e1f5f3/src/main/kotlin/no/nav/dagpenger/behov/journalforing/tjenester/RapporteringJournalf%C3%B8ringBehovL%C3%B8ser.kt#L29
