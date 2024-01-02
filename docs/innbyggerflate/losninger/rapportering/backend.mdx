@@ -40,12 +40,33 @@ Appen bruker OpenAPI for å definere og dokumentere API-et. OpenAPI-spesifikasjo
 > Denne jobben kjører hver mandag. Den finner alle personer som har rapporteringsplikt av type "søknad" eller "vedtak" og oppretter en ny rapporteringsperiode for disse.
 
 ## Domene
-### Rapporteringsperiode
-To be continued...
 ### Rapporteringsplikt
-To be continued...
+Dagpengesøkere og dagpengemottakere har rapporteringsplikt, dette betyr at de er pliktig til å rapportere aktiviteter i en gitt periode. Vi skiller mellom tre typer rapporteringsplikt:
+
+**Ingen**: Person har ikke rapporteringsplikt
+
+**Søknad**: Person har rapporteringsplikt fordi hen har sendt en søknad om dagpenger. Rapporteringsplikten starter fra og med søknadstidspunktet.
+
+**Vedtak**: Person har rapporteringsplikt fordi hen har fått innvilget dagpenger. Rapporteringsplikten starter fra og med virkningsdatoen til vedtaket.
+
+Flyten for de ulike typene rapporteringsplikt er som følger:
+1. Person sender en søknad om dagpenger og blir opprettet i våre systemer med rapporteringsplikt av type "ingen".
+2. For å kunne opprette rapporteringsplikt av type "søknad" trenger vi søknadstidspunktet, når vi har fått svar på dette behovet oppretter vi rapporteringsplikt av type "søknad" for personen fra og med søknadstidspunktet.
+3. Person får et vedtak, enten innvilgelse eller avslag. Ved innvilgelse oppretter vi rapporteringsplikt av type "vedtak" fra og med virkningsdatoen til vedtaket. Ved avslag oppretter vi rapporteringsplikt av type "ingen" fra virkningsdatoen til vedtaket.
+
+### Rapporteringsperiode
+
+En rapporteringsperiode er en periode hvor dagpengesøkere med rapporteringsplikt kan rapportere aktiviteter. Alle rapporteringsperioder starter på en mandag og varer i 2 uker.
+En rapporteringsperiode kan være i en av følgende tilstander:
+
+**TilUtfylling**: Rapporteringsperioden er opprettet og klar til å fylles ut/er under utfylling.
+
+**Godkjent**: Rapporteringsperioden er godkjent av bruker og klar til å sendes til beregning.
+
+**Innsendt**: Rapporteringsperioden er sendt til beregning.
+
 ### Aktivitet
-To be continued...
+Det rapporteres aktiviteter for dagene i en rapporteringsperiode. En aktivitet er enten arbeid, sykdom eller ferie og har en dato og antall timer. En aktivitet kan være i tilstand åpen, låst eller slettet. En aktivitet er åpen frem til bruker godkjenner rapporteringsperioden, da settes tilstanden til låst. Ved avgodkjenning av en rapporteringsperiode settes alle aktiviteter til åpen igjen. En aktivitet kan bare slettes når rapporteringsperioden er i tilstanden "TilUtfylling".
 
 ## Utfordringer
 
