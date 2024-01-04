@@ -19,10 +19,15 @@ Dette er hovedsakelig backend-løsninger for [**`dp-dagpenger`**][dp-dagpenger] 
 - Rapids and rivers
 - Postgres
 - JUnit
+- OpenAPI
 
 ## App-arkitektur
 
 ### API
+
+Appen bruker OpenAPI for å definere og dokumentere API-et. OpenAPI-spesifikasjonen ligger i [**`innsyn-api.yaml`**][innsyn-api.yaml] filen og dokumentasjonen kan du finne to steder:
+1. Åpen versjon på GitHub Pages: https://navikt.github.io/dp-innsyn/
+2. Interaktiv versjon som krever naisdevice: https://dp-innsyn.intern.dev.nav.no/innsyn
 
 ```mermaid
 flowchart TB
@@ -60,3 +65,4 @@ flowchart TB
 [dp-soknad]: https://github.com/navikt/dp-soknad
 [dp-dagpenger]: https://github.com/navikt/dp-dagpenger
 [aia-backend]: https://github.com/navikt/aia-backend
+[innsyn-api.yaml]: https://github.com/navikt/dp-innsyn/blob/main/openapi/src/main/resources/innsyn-api.yaml
