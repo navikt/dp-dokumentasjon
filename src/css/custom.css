@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap');
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -6,25 +7,76 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #005077;
+  --ifm-color-primary-dark: #00486b;
+  --ifm-color-primary-darker: #004465;
+  --ifm-color-primary-darkest: #003853;
+  --ifm-color-primary-light: #005883;
+  --ifm-color-primary-lighter: #005c89;
+  --ifm-color-primary-lightest: #005883;
   --ifm-code-font-size: 95%;
+  --ifm-code-font-family: "";
+  --ifm-font-family: 'Source Sans 3', sans-serif
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 996px) {
+    :root {
+      --ifm-font-size-base: 18px;
+    }
+ 
+     h1 {
+      font-size: 1.5rem !important;
+    }
+    .hero .hero__title {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (min-width: 997px) {
+    :root {
+      --ifm-font-size-base: 17px;
+    }
+    article header h1 {
+      font-size: 2rem !important;
+    }
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+
+ --ifm-color-primary: #4f98b5;
+  --ifm-color-primary-dark: #abcedb;
+  --ifm-color-primary-darker: #86b8cc;
+  --ifm-color-primary-darkest: #86b8cc;
+  --ifm-color-primary-light: #61a3bd;
+  --ifm-color-primary-lighter: #6aa8c1;
+  --ifm-color-primary-lightest: #86b8cc;
+  --ifm-background-color: #23272f;
+
+  --ifm-background-color: #23272F !important; 
+  --ifm-background: #23272F !important;  
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  font-size: 18px;
+  line-height: 1.8;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+
+main {
+  max-width:1024px !important ;
+
+}
+h1{
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+article {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
