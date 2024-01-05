@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-import { Drawio } from "@site/src/components/drawio";
+import { Drawio } from '@site/src/components/drawio';
 
 # Meldekort
 
@@ -96,7 +96,7 @@ Flertallet sender meldekortene sine fra fredag til mandag.
 Det betyr at det ikke er veldig smart å deploye noe til prod i disse dagene med mindre det er en prodfeil fiks.
 Det er bedre å deploye til prod fra tirsdag til torsdag.
 
-![](/img/meldeplikt-innsendte.png)  
+![](./meldeplikt-innsendte.png)  
 _Antall REST-kall for å kontrollere meldekort per ukedag fra mandag til søndag_
 
 ## Oppdatering
@@ -115,6 +115,7 @@ Dependabot oppretter pull request'er og utviklere må merge disse PRene til mast
 > Logg slettes etter 30 dager i `meldekorservice`, 90 dager i `meldekort-api`, 120 dager i `meldekortkontroll-api`.
 
 ## Nyttige kommandoer
+
 Husk at `meldekorservice` og `meldekortkontroll-api` er i FSS.  
 For å velge FSS:  
 `kubectl config use-context dev-fss`  

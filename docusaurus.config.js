@@ -4,60 +4,61 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import { themes as prismThemes } from "prism-react-renderer";
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Dagpenger - teknisk dokumentasjon",
-  tagline: "Dinosaurs are cool",
-  favicon: "img/logo.svg",
+  title: 'Dagpenger - teknisk dokumentasjon',
+  tagline: 'Dinosaurs are cool',
+  favicon: 'img/logo.svg',
 
   // Set the production url of your site here
-  url: "https://navikt.github.io",
+  url: 'https://navikt.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/dp-dokumentasjon",
+  baseUrl: '/dp-dokumentasjon',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "navikt", // Usually your GitHub org/user name.
-  projectName: "dp-dokumentasjon", // Usually your repo name.
-  deploymentBranch: "main",
+  organizationName: 'navikt', // Usually your GitHub org/user name.
+  projectName: 'dp-dokumentasjon', // Usually your repo name.
+  deploymentBranch: 'main',
   trailingSlash: false,
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
-  plugins: [require.resolve("docusaurus-lunr-search"), ["drawio", {}]],
-  themes: ["@docusaurus/theme-mermaid"],
+  plugins: [require.resolve('docusaurus-lunr-search'), ['drawio', {}]],
+  themes: ['@docusaurus/theme-mermaid'],
   markdown: {
     mermaid: true,
   },
-  staticDirectories: ["static"],
+  staticDirectories: ['static'],
   stylesheets: [
     {
-      href: "https://fonts.googleapis.com/css2?family=Architects+Daughter",
+      href: 'https://fonts.googleapis.com/css2?family=Architects+Daughter',
     },
   ],
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: "./sidebars.js",
+          sidebarPath: './sidebars.js',
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/navikt/dp-dokumentasjon",
+          editUrl: 'https://github.com/navikt/dp-dokumentasjon',
         },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: './src/css/custom.css',
         },
       }),
     ],
@@ -67,29 +68,29 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: "Dagpenger",
+        title: 'Dagpenger',
         logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+          alt: 'My Site Logo',
+          src: 'img/logo.svg',
         },
         items: [
           {
-            to: "/hvordan-skrive",
-            label: "Hvordan skrive her",
-            position: "left",
+            to: '/hvordan-skrive',
+            label: 'Hvordan skrive her',
+            position: 'left',
           },
 
           {
-            href: "https://github.com/navikt/dp-dokumentasjon",
-            label: "GitHub",
-            position: "right",
+            href: 'https://github.com/navikt/dp-dokumentasjon',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
       footer: {
-        style: "dark",
+        style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()} NAV. Built with Docusaurus.`,
       },
       prism: {
