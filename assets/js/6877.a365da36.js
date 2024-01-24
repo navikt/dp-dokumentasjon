@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdp_dokumentasjon=self.webpackChunkdp_dokumentasjon||[]).push([[6877],{6877:(n,s,e)=>{e.r(s),e.d(s,{default:()=>t});const t='\n# Systemkart\n\nimport { Drawio } from "@site/src/components/drawio";\n\n<Drawio filename="systemkart/systemkart.drawio" />\n\n'}}]);
