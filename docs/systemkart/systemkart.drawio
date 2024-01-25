@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-01-25T11:50:57.485Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.21 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" version="22.1.21" etag="wrOoV84YTDNc3ljnTptO" type="device">
+<mxfile host="Electron" modified="2024-01-25T12:06:22.924Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.21 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" version="22.1.21" etag="-lddxdIUMmBeY_UshZQD" type="device">
   <diagram id="bY9n8TvvBSCk7CfmKey6" name="Systemkart">
-    <mxGraphModel dx="1645" dy="1619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1234" dy="1214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -162,7 +162,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LP5wE_IAtdg5CI_S4EkR-93" value="&lt;div style=&quot;background-color:#282c34;color:#abb2bf&quot;&gt;&lt;pre style=&quot;font-family: &amp;quot;MesloLGS NF&amp;quot;, monospace;&quot;&gt;&lt;pre style=&quot;font-family: &amp;quot;MesloLGS NF&amp;quot;, monospace;&quot;&gt;&lt;div&gt;&lt;pre style=&quot;font-family: &amp;quot;MesloLGS NF&amp;quot;, monospace;&quot;&gt;@behov&lt;/pre&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/pre&gt;&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
-          <mxGeometry x="775" y="570" width="110" height="70" as="geometry" />
+          <mxGeometry x="750" y="580" width="110" height="70" as="geometry" />
         </mxCell>
         <UserObject label="dp-vaktmester-mellomlagring" link="https://github.com/navikt/dp-vaktmester-mellomlagring" id="LP5wE_IAtdg5CI_S4EkR-100">
           <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
@@ -212,6 +212,9 @@
           <mxGeometry x="0.0466" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="8n4YhEoHceQyYeUhLGXL-79" value="soknad_endret_tilstand" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="730" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
