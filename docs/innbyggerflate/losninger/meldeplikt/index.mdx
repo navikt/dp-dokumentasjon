@@ -110,9 +110,11 @@ Dependabot oppretter pull request'er og utviklere må merge disse PRene til mast
 - [meldekort-api dashboard](https://grafana.nais.io/d/h_LlxHcVz/team-meldeplikt-nais-app-dashbord?from=now%2Fd&to=now&orgId=1&refresh=1m)
 - [meldekortservice dashboard](https://grafana.nais.io/d/531ynU5Vz/meldekortservice?orgId=1)
 
-> Man kan også sjekke `kall_logg-tabellene` i `meldekort-api`, `meldekorservice` og `meldekortkontroll-api`.
+> Man kan også sjekke `kall_logg`-tabellene i `meldekort-api`, `meldekorservice` og `meldekortkontroll-api`.
 > Disse applikasjonene logger alle requeste'er som kommer inn og alle request'er de sender ut og alle respons'er.
 > Logg slettes etter 30 dager i `meldekorservice`, 90 dager i `meldekort-api`, 120 dager i `meldekortkontroll-api`.
+> `logginfo`-kolonnen inneholder FNR når det er mulig å få det fra request.
+> For å koble til databaser: https://confluence.adeo.no/display/TMP/GCP+-+Koble+til+PostgreSQL+database
 
 ## Nyttige kommandoer
 
