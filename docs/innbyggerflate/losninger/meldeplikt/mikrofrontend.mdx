@@ -30,20 +30,28 @@ Applikasjonen viser ingenting hvis data er tom (det betyr at bruker ikke har mel
 
 Hvis data ikke er tom, sjekker applikasjonen om det finnes meldekort for etterregistrering, meldekort som kan sendes nå og meldekort som ikke kan sendes ennå og viser:
 - hvis det finnes meldekort for etterregistrering:\
-  Du har fått vedtak for en periode du ikke har sendt meldekort. Du må sende %count% meldekort / You have received a decision for a period in which you have not sent employment status form. You must send %count% employment status forms\
+  NB: Du har fått vedtak for en periode du ikke har sendt meldekort. Du må sende %count% meldekort\
+  EN: You have received a decision for a period in which you have not sent employment status form. You must send %count% employment status forms\
   ![](./etterregistrering.png)
 
 - hvis det finnes meldekort som kan sendes nå:\
-  Send inn meldekort / Submit employment status form\
+  NB: Send inn meldekort\
+  EN: Submit employment status form\
   eller\
-  Du har %count% meldekort klare til innsending / You have %count% employment status forms ready to be sent\
+  NB: Du har %count% meldekort klare til innsending\
+  EN: You have %count% employment status forms ready to be sent\
   ![](./klar.png)
   ![](./klare.png)
 
   I tillegg når man risikerer trekk, viser applikasjonen:\
-  Siste frist før trekk: %count% / The final submission deadline without reduced payout: %count%\
+  NB: Siste frist før trekk: %dato%\
+  EN: The final submission deadline without reduced payout: %dato%\
   ![](./klare_risikerer_trekk.png)
 
 - hvis de finnes meldekort som ikke kan sendes ennå:\
-  Neste meldekort kan sendes fra %count% / The next employment status form can be sent on %count%\
+  NB: Neste meldekort kan sendes fra %dato%\
+  EN: The next employment status form can be sent on %dato%\
   ![](./ikke_klar.png)
+
+Rent teoretisk kan én, to eller alle tre panelene vises samtidig.\
+Alle panelene er lenker som sender brukere til meldekort-frontend.
