@@ -71,16 +71,29 @@ Da skal v1 vises når man har en aktiv meldeperiode som er før `2023-10-29` og 
 2. Gjør nødvendige endringer i denne branchen
 3. Deploy branchen til Q1 og/eller Q2. For å gjøre dette:
 
-   - Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg riktig branch
-   - Velg miljø Q1 eller Q2 > Run workflow
+   1. Åpne GitHub repo
+   2. Actions
+   3. Build and Deploy to dev
+   4. Run workflow
+   5. Velg riktig branch
+   6. Velg miljø Q1 eller Q2
+   7. Run workflow
+   ![](./deploy_dev.png)
 
 4. Sjekk endringene i Q1 og/eller Q2
 5. Opprett en pull request
 6. Når PRen er sjekket, merge branchen til master
 7. Bygg release. For å gjøre dette:
 
-   - Åpne GitHub repo > Actions > Build and Deploy to dev > Run workflow > Velg master branch
-   - Velg miljø Q1 eller Q2, velg bump > Run workflow
+   1. Åpne GitHub repo
+   2. Actions
+   3. Build and Deploy to dev
+   4. Run workflow
+   5. Velg master branch
+   6. Velg miljø Q1 eller Q2
+   7. Velg bump
+   8. Run workflow
+   ![](./create_release.png)
 
 8. Deploy release til prod ([Når er det smartest å release til prod?](#når-er-det-smartest-å-release-til-prod)). For å gjøre dette:
 
