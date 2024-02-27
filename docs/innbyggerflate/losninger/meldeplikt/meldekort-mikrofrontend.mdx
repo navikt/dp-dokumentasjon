@@ -38,6 +38,8 @@ Ved sending, etterregistrering og korrigering må brukere gå gjennom 4 steg:
 3. Bekreftelse
 4. Kvittering
 
+Brukeren kan gå forover og bakover gjennom stegene 1-3 eller avbryte innsending.
+
 **Spørsmål-steget** inneholder 5 spørsmål om aktiviteter for rapporteringsperioden:
 om bruker har jobbet, har deltatt på kurs/utdanning, har vært syk, har hatt ferie eller annet fravær og om bruker fortsatt ønsker å være registrert som arbeidssøker.\
 Ved korrigering må man også velge én fra begrunnelsene til korrigering.\
@@ -54,6 +56,8 @@ Videre sjekker applikasjonen mulige/umulige kombinsjoner av aktiviteter for hver
 
 Det er selvfølgelig ikke tillatt å skrive inn mindre enn 0 og mer enn 24 arbeidstimer per dag. I tillegg må antall timer være hele eller halve timer (dvs. 0.5, 2, 5.5 er gyldige tall, men 4.2 er ikke gyldig).
 
-**Bekreftelse-steget** viser all data som bruker har oppgitt slik at bruker kan sjekke en gang til at alt stemmer. I tillegg må bruker bekrefte at han har oppgitt riktige opplysninger og at han har lest og forstått veiledningstekstene.
+**Bekreftelse-steget** viser all data som bruker har oppgitt slik at bruker kan sjekke en gang til at alt stemmer. I tillegg må bruker bekrefte at han har oppgitt riktige opplysninger og at han har lest og forstått veiledningstekstene.\
+Når bruker trykker på Neste-knappen, sender applikasjonen data til `meldekort-api` og hvis `meldekort-api` svarer med status OK, sender bruker videre til Kvittering-steget.\
+Hvis `meldekort-api` svarer med status FEIL, sender applikasjonen bruker tilbake til Utfylling-steget og viser feilmeldinger returnert fra `meldekort-api`.
 
 **Kvittering-steget** viser all data som bruker har oppgitt og informasjon om at meldekort har blitt mottatt.
