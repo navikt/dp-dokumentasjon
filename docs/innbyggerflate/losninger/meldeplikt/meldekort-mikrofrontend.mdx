@@ -12,3 +12,40 @@ Ingen endringer ble gjort i backend-koden.
 `meldekort-frontend` er en ganske vanlig Remix-applikasjon. Det eneste som interessant her er at vi må hente alle tekster fra `meldekort-api` iht valgt meldekort.
 Applikasjonen prøver å laste ned tekstene fra `/locales/:sprak/:fraDato.json`. Slike requester fanges opp av server.js. Server.js sender request videre til `meldekort-api`, får tekstene derfra og returnerer dem.
 Dermed får applikasjonen tekstene fra `meldekort-api` uten å vite om dette.
+
+Applikasjonen har 5 hoved sider:
+- Send meldekort
+- Tidligere meldekort
+- Etterregistrere meldekort
+- Om meldekort
+- Ofte stilte spørsmål
+
+"Send meldekort" og "Etterregistrere meldekort" viser lister med meldekort som kan sendes og etterregistreres henholdsvis.\
+Både "Send meldekort" og "Etterregistrere meldekort" sjekker om det finnes ett eller flere meldekort som kan sendes.\
+Hvis det finnes kun ett, sendes bruker til dette meldekort med en gang.\
+Hvis det finnes flere enn fem meldekort, viser "Send meldekort" en feilmelding. "Etterregistrere meldekort" har ikke slikk logikk.\
+Hvis de ikke finnes meldekort som kan sendes nå, sjekker "Send meldekort" om det finnes meldekort som ikke kan sendes ennå og viser informasjon om første slike meldekort.
+
+"Tidligere meldekort" viser en liste med allerede sente meldekort.\
+Det er mulig å klikke på hvert meldekort fra denne listen og få se detaljene til dette meldekortet.\
+Fra detaljene er det også mulig å åpne meldekort for korrigering (hvis dette meldekort er korrigerbart).
+
+"Om meldekort" og "Ofte stilte spørsmål" er statiske sider med tekst.
+
+Ved sending, etterregistrering og korrigering må brukere gå gjennom 4 steg:
+1. Spørsmål
+2. Utfylling
+3. Bekreftelse
+4. Kvittering
+
+Spørsmål-steget inneholder 5 spørsmål om aktiviteter for rapporteringsperioden:
+om bruker har jobbet, har deltatt på kurs/utdanning, har vært syk, har hatt ferie eller annet fravær og om bruker fortsatt ønsker å være registrert som arbeidssøker.\
+Ved korrigering må man også velge én fra begrunnelsene til korrigering.\
+Hvis bruker svarer Nei på de første fire spørsmålene (om aktiviteter), sendes han videre til Bekreftelse-steget fordi det er ingen vits i å vise ham Utfylling-steget.\
+Hvis bruker svarer Nei på det femte spørsmålet (dvs. bruker ønsker ikke å være registrert som arbeidssøker videre), viser applikasjonen et modal-vindu og ber om å bekrefte svaret.
+
+Utfylling-steget viser rader som tilsvarer typer aktiviteter og kolonner som tilsvarer dager slik at bruker kan skrive inn hvor mange timer han har jobbet eller velge type aktivitet han har hatt hver dag i raporteringsperioden.
+
+Bekreftelse-steget viser all data som bruker har oppgitt slik at bruker kan sjekke en gang til at alt stemmer. I tillegg må bruker bekrefte at han har oppgitt riktige opplysninger og at han har lest og forstått veiledningstekstene.
+
+Kvittering-steget viser all data som bruker har oppgitt og informasjon om at meldekort har blitt mottatt.
